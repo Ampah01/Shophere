@@ -1,21 +1,24 @@
 import React from "react";
-import { FaTruck, FaBox, FaTag } from "react-icons/fa"; 
+import { HiOutlineTruck, HiOutlineMapPin, HiOutlineTag } from "react-icons/hi2";
+
 const MainHeader = () => {
   return (
-    <section className="hidden sm:flex justify-between bg-gray-200 text-sm px-4 items-center py-1 min-w-min">
-      <div className="font-semibold">Welcome to worldwide Shophere</div>
-      <div className="flex space-x-6 items-center">
+    <section className="flex justify-between bg-gray-200 text-sm px-1 py-1 max-w-full items-center">
+      <div className="text-[12px] md:text-sm md:font-medium">Welcome to Shophere</div>
+      <div className="flex space-x-6 items-center md:mr-10">
         <p className="flex items-center">
-          <FaTruck className="mr-2 text-sky-400" />
-          Deliver to <span className="font-semibold ml-1">233445</span>
+          <HiOutlineTruck className="text-sky-400 text-lg" />
+          <span className="md:block hidden md:ml-1">
+            Deliver to <span className="font-semibold ml-1">233445</span>
+          </span>
         </p>
         <p className="flex items-center">
-          <FaBox className="mr-2 text-sky-400" />
-          Track your order
+          <HiOutlineMapPin className="text-sky-400 text-lg" />
+          <span className="md:block hidden md:ml-1">Track your order</span>
         </p>
         <p className="flex items-center">
-          <FaTag className="mr-2 text-sky-400" />
-          All offers
+          <HiOutlineTag className="text-sky-400 text-lg" />
+          <span className="md:block hidden md:ml-1">All offers</span>
         </p>
       </div>
     </section>

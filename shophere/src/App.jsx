@@ -4,9 +4,10 @@ import MainHeader from "./Component/Header/MainHeader"
 function App() {
 
   return (
-    <div className="bg-slate-100 min-h-screen w-full">
+    <div className="bg-white min-h-screen min-w-min ">
       <MainHeader className="md:hidden"/>
       <Header />
+      <hr />
     </div>
   )
 }
