@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+  
 const DiscountBanner = ({ originalPrice, productName, imageUrl }) => {
   const discountedPrice = (originalPrice * 0.5).toFixed(2);
 
   return (
-    <div className="w-full mx-auto h-[200px] bg-white shadow-lg overflow-hidden flex items-center border border-sky-500 rounded-xl">
+    <div className="w-full mx-auto h-[100px] md:h-[200px] bg-white shadow-lg overflow-hidden flex items-center border border-sky-500 rounded-xl">
       <div className="w-1/3 h-full">
         <img
           src={imageUrl}
@@ -54,7 +54,7 @@ const DiscountBannerCarousel = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: true ,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

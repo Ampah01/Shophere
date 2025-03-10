@@ -20,7 +20,7 @@
 }
 
 body {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .scrollable-div {

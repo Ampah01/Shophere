@@ -5,7 +5,6 @@ import {
   HiOutlineUser,
   HiOutlineShoppingCart,
 } from "react-icons/hi2";
-import { BiMenuAltLeft } from "react-icons/bi";
 import { jwtDecode } from "jwt-decode";
 import { useSelector, useDispatch } from "react-redux";
 import { login, logout } from "../../store/authSlice";
@@ -62,14 +61,42 @@ const Header = ({ isLoggedIn }) => {
   }, [isDropdownOpen, isLoggedIn]);
 
   return (
-    <header className="bg-white py-3 w-full md:px-6 px-2">
-      <div className="container flex items-center justify-between">
+    <header className="bg-white py-1 w-full md:w-full px-2 md:px-6">
+      <div className="flex items-center justify-between w-full">
         <div className="flex items-center">
-          <span className="flex items-center font-bold text-sky-500 text-2xl bg-slate-100 p-1 rounded-md transition duration-200">
-            <BiMenuAltLeft />
+          <span className="flex items-center font-bold text-sky-500 text-2xl p-1 rounded-md transition duration-200">
+            {/* SVG Logo */}
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="48"
+                fill="white"
+                stroke="#38bdf8"
+                strokeWidth="4"
+              />
+              <path d="M30 40 L70 40 L80 80 L20 80 Z" fill="#38bdf8" />
+              <circle cx="35" cy="85" r="5" fill="white" />
+              <circle cx="65" cy="85" r="5" fill="white" />
+              <text
+                x="50"
+                y="30"
+                fontSize="16"
+                fontWeight="bold"
+                textAnchor="middle"
+                fill="#38bdf8"
+              >
+                S
+              </text>
+            </svg>
           </span>
 
-          <h1 className="ml-2 text-sky-500 text-xl md:text-2xl font-bold md:block hidden">
+          <h1 className="ml-2 text-sky-500 text-xl md:text-xl font-bold md:block hidden">
             ShopHere
           </h1>
         </div>
@@ -88,7 +115,7 @@ const Header = ({ isLoggedIn }) => {
             </i>
           </div>
 
-          <div className="flex items-center space-x-2 md:space-x-4 ml-4">
+          <div className="flex items-center space-x-2  ml-4">
             {isLoggedIn ? (
               <div className="relative">
                 <img
@@ -142,7 +169,9 @@ const Header = ({ isLoggedIn }) => {
                 <span className="hover:bg-slate-100 rounded-md">
                   <HiOutlineShoppingCart />
                 </span>
-                <span className="ml-1 text-[15px] md:block hidden font-semibold">Cart</span>
+                <span className="ml-1 text-[15px] md:block hidden font-semibold">
+                  Cart
+                </span>
               </button>
             )}
           </div>

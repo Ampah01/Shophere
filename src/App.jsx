@@ -9,11 +9,11 @@ const App = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="container mx-auto">
+    <div className="bg-white min-h-screen w-full ">
+      <div className="w-full mx-auto">
         <MainHeader isLoggedIn={isLoggedIn} />
         <Header isLoggedIn={isLoggedIn} />
-        <hr />
+        <hr className="mx auto"/>
         <Category />
         <DiscountBanner
         />
